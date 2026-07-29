@@ -43,7 +43,6 @@ askal/
 ├── Release x64/ (EXE)
 │
 ├── version-XX.XX # other versions of the program
-│  ├── Release x64/ # a ready-made and compiled program (.exe)
 │  ├── src/ # program sources including codes
 │  ├── README.md # brief description of the program version
 │  ├── CHANGELOG.md # a brief description of the changes in the version
@@ -63,6 +62,7 @@ To build the project:
 2. Create a C++17 Console Application.
 3. Add all files from the `src/` directory.
 4. Build the project (Ctrl + Shift + B).
+5. Add the path to the created program to Path so that you can easily interact with it.
 
 > CMake support is planned for future releases.
 
