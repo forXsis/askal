@@ -38,8 +38,10 @@ askal/
 ├── main/ # current version
 │  ├── README.md
 │  ├── LICENSE (Apache 2.0)
-│  ├── Release x64/ (EXE)
 │  ├── .gitignore
+│
+├── Release x64/ (EXE)
+│
 ├── version-XX.XX # other versions of the program
 │  ├── Release x64/ # a ready-made and compiled program (.exe)
 │  ├── src/ # program sources including codes
