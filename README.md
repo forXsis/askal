@@ -37,8 +37,8 @@ askal/
 │
 ├── main/ # current version
 │  ├── README.md
-│  ├── CHANGELOG.md
 │  ├── LICENSE (Apache 2.0)
+│  ├── Release x64/ (EXE)
 │  ├── .gitignore
 ├── version-XX.XX # other versions of the program
 │  ├── Release x64/ # a ready-made and compiled program (.exe)
