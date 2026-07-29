@@ -15,8 +15,6 @@ The project was created to study compiler construction, virtual machines and lan
 - Custom bytecode format (`.aklp`)
 - Lightweight Virtual Machine
 - Static typing
-- Type inference (`var`)
-- Cross-platform architecture
 - Fast startup
 - Easy-to-read syntax
 
@@ -27,7 +25,7 @@ The project was created to study compiler construction, virtual machines and lan
 ```akl
 var str name = "World";
 
-println < "Hello, " < name;
+println < "Hello, " + name;
 ```
 
 ---
@@ -37,46 +35,38 @@ println < "Hello, " < name;
 ```
 askal/
 │
-├── compiler/      # Compiler source
-├── vm/            # Virtual Machine
-├── include/       # Headers
-├── std/           # Standard Library (future)
-├── examples/      # Example programs
-├── docs/          # Documentation
-└── tests/         # Tests
+├── main/ # current version
+│  │
+│  ├── Release x64/ # a ready-made and compiled program (.exe)
+│  ├── src/ # program sources including codes
+│  ├── README.md # brief description of the program version
+│  ├── CHANGELOG.md # a brief description of the changes in the version
+├── version-XX.XX # other versions of the program
 ```
 
 ---
 
 ## Building
 
-### Requirements
+At the moment Askal is developed with **Visual Studio 2022** using the **C++17** standard.
 
-- CMake
-- C++20 compiler
+To build the project:
 
-Build:
+1. Open the source code in Visual Studio 2022.
+2. Create a C++17 Console Application.
+3. Add all files from the `src/` directory.
+4. Build the project (Ctrl + Shift + B).
 
-```bash
-git clone https://github.com/forXiss/askal.git
-
-cd askal
-
-mkdir build
-cd build
-
-cmake ..
-cmake --build .
-```
+> CMake support is planned for future releases.
 
 ---
 
 ## Roadmap
 
 - [x] Variables
-- [x] Arithmetic
-- [x] Bytecode generation
-- [x] Virtual Machine
+- [x] Arithmetic (Base: +,-,*,/)
+- [x] Bytecode generation (Compiler)
+- [x] Virtual Machine (Runtime)
 - [ ] Functions
 - [ ] Loops
 - [ ] Arrays
