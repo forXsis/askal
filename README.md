@@ -36,12 +36,17 @@ println < "Hello, " + name;
 askal/
 │
 ├── main/ # current version
-│  │
+│  ├── README.md
+│  ├── CHANGELOG.md
+│  ├── LICENSE (Apache 2.0)
+│  ├── .gitignore
+├── version-XX.XX # other versions of the program
 │  ├── Release x64/ # a ready-made and compiled program (.exe)
 │  ├── src/ # program sources including codes
 │  ├── README.md # brief description of the program version
 │  ├── CHANGELOG.md # a brief description of the changes in the version
-├── version-XX.XX # other versions of the program
+│  ├── LICENSE (Apache 2.0)
+│  ├── .gitignore
 ```
 
 ---
