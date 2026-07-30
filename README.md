@@ -38,16 +38,16 @@ askal/
 ├── main/ # current version
 │  ├── README.md
 │  ├── LICENSE (Apache 2.0)
+│  ├── CHANGELOG.md
 │  ├── .gitignore
 │
-├── Release x64/ (EXE)
+├── Release/ (actual version and other versions in zip archive (with README, docs, examples, LICENSE))
 │
-├── version-XX.XX # other versions of the program
-│  ├── src/ # program sources including codes
-│  ├── README.md # brief description of the program version
-│  ├── CHANGELOG.md # a brief description of the changes in the version
-│  ├── LICENSE (Apache 2.0)
-│  ├── .gitignore
+├── examples/ (.akl)
+│
+├── src/ (source code)
+│
+├── docs/ (documentation)
 ```
 
 ---
