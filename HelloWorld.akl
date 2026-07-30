@@ -1,0 +1,2 @@
+var str name = "World";
+print < "Hello, " + name + "!";

@@ -1,0 +1,12 @@
+var int age = 17;
+var str name = "forXsis";
+var float file_size = 12.5;
+var bool active = true;
+
+println < "Age ";
+print < age;
+print < "Name " + name;
+println < "File_size ";
+print < file_size;
+println < "Active ";
+print < active;
