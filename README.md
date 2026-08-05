@@ -1,4 +1,5 @@
 # Askal
+<img width="72" height="70" alt="askal-logo" src="https://github.com/user-attachments/assets/7bc01f1d-1414-4e2a-8f1b-e606d9b6d2a8" />
 
 > A fast, lightweight and educational programming language built from scratch in C++.
 
