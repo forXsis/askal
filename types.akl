@@ -1,0 +1,38 @@
+use console;
+
+// Целые разных размеров
+var int8  a = 100;
+var int16 b = 30000;
+var int32 c = 1000000;
+var int64 d = 9000000000;
+var int   e = 42;         // компилятор выберет размер
+
+// Дробные
+var float f = 3.14;
+
+// Логические
+var bool flag = true;
+
+// Строки
+var str name = "Askal";
+
+// Hex и Bin
+var hex h = 0xDEADBEEF;
+var bin bi = 0b1010;
+
+// AUTO — тип выводится из значения
+var auto x = 10;
+var auto y = "строка";
+var auto z = 3.14;
+
+// Вывод
+console >> print("a = "); console >> print_int(a); console >> println("");
+console >> print("b = "); console >> print_int(b); console >> println("");
+console >> print("c = "); console >> print_int(c); console >> println("");
+console >> print("d = "); console >> print_int(d); console >> println("");
+console >> print("e = "); console >> print_int(e); console >> println("");
+console >> print("f = "); console >> print_float(f); console >> println("");
+console >> print("flag = "); console >> print_bool(flag); console >> println("");
+console >> print("name = "); console >> println(name);
+console >> print("h = "); console >> print_hex(h); console >> println("");
+console >> print("bi = "); console >> print_bin(bi); console >> println("");
