@@ -1,0 +1,57 @@
+use console;
+
+// Литерал
+var dict person = {"name": "Alice", "age": 30, "city": "Moscow"};
+
+// Чтение по ключу
+console >> print("name = ");
+console >> println(person["name"]);
+console >> print("age = ");
+console >> print_int(person["age"]);
+console >> println("");
+
+// Запись
+person["age"] = 31;
+console >> print("age (updated) = ");
+console >> print_int(person["age"]);
+console >> println("");
+
+// has
+if (person >> has("name")) {
+    console >> println("has 'name'");
+}
+if (person >> has("phone")) {
+    console >> println("has 'phone'");
+} else {
+    console >> println("no 'phone'");
+}
+
+// keys
+var list keys = person >> keys();
+console >> print("keys: ");
+for (var int64 i = 0; i < len(keys); i = i + 1) {
+    console >> print(keys[i]);
+    console >> print(" ");
+}
+console >> println("");
+
+// values
+var list vals = person >> values();
+console >> print("values: ");
+for (var int64 i = 0; i < len(vals); i = i + 1) {
+    console >> print(vals[i]);
+    console >> print(" ");
+}
+console >> println("");
+
+// remove
+person >> remove("city");
+console >> print("after remove, len = ");
+console >> print_int(len(person));
+console >> println("");
+
+// Пустой словарь
+var dict empty = {};
+console >> print("empty len = ");
+console >> print_int(len(empty));
+console >> println("");
