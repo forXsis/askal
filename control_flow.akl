@@ -1,0 +1,79 @@
+use console;
+
+// --- if / else if / else ---
+fun classify(int64 n) {
+    if (n < 0) {
+        console >> println("negative");
+    } else if (n == 0) {
+        console >> println("zero");
+    } else {
+        console >> println("positive");
+    }
+    return null;
+}
+
+classify(-5);
+classify(0);
+classify(7);
+
+// --- while ---
+console >> println("");
+console >> print("while 1..10: ");
+var int64 i = 1;
+while (i <= 10) {
+    console >> print_int(i);
+    console >> print(" ");
+    i = i + 1;
+}
+console >> println("");
+
+// --- for ---
+console >> print("for 1..10: ");
+for (var int64 j = 1; j <= 10; j = j + 1) {
+    console >> print_int(j);
+    console >> print(" ");
+}
+console >> println("");
+
+// --- while + break + continue ---
+console >> print("odd 1..20: ");
+var int64 k = 0;
+var int64 sum = 0;
+while (k < 20) {
+    k = k + 1;
+    if (k > 15)     { break; }
+    if (k % 2 == 0) { continue; }
+    sum = sum + k;
+    console >> print_int(k);
+    console >> print(" ");
+}
+console >> println("");
+console >> print("sum of odd = ");
+console >> print_int(sum);
+console >> println("");
+
+// --- switch ---
+fun day(int64 n) {
+    switch (n) {
+        case 1: console >> println("Mon");
+        case 2: console >> println("Tue");
+        case 3: console >> println("Wed");
+        default: console >> println("Other");
+    }
+    return null;
+}
+
+day(1);
+day(2);
+day(3);
+day(99);
+
+// --- вложенные циклы ---
+console >> println("");
+console >> println("Triangle:");
+for (var int64 r = 1; r <= 5; r = r + 1) {
+    for (var int64 c = 1; c <= r; c = c + 1) {
+        console >> print("*");
+    }
+    console >> println("");
+}
