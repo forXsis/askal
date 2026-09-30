@@ -1,0 +1,45 @@
+use console;
+
+fun putln(int64 v) {
+    console >> print_int(v);
+    console >> println("");
+    return null;
+}
+
+// Создание через литерал
+var list xs = [10, 20, 30];
+
+putln(len(xs));            // 3
+putln(xs[0]);              // 10
+putln(xs[2]);              // 30
+
+// Изменение по индексу
+xs[1] = 99;
+putln(xs[1]);              // 99
+
+// push / pop
+xs >> push(40);
+putln(len(xs));            // 4
+var int64 p = xs >> pop();
+putln(p);                  // 40
+putln(len(xs));            // 3
+
+// insert / remove
+xs >> insert(0, 5);
+putln(xs[0]);              // 5
+xs >> remove(0);
+putln(xs[0]);              // 10
+
+// Пустой список
+var list empty = [];
+putln(len(empty));         // 0
+
+// Список строк
+var list names = ["Alice", "Bob", "Charlie"];
+for (var int64 i = 0; i < len(names); i = i + 1) {
+    console >> println(names[i]);
+}
+
+// clear
+xs >> clear();
+putln(len(xs));            // 0
