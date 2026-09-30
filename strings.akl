@@ -1,0 +1,61 @@
+use console;
+use string;
+
+var str s = "Hello, World";
+
+// Длина
+console >> print("len = ");
+console >> print_int(string >> len(s));
+console >> println("");
+
+// Подстрока
+console >> print("substr(0, 5) = ");
+console >> println(string >> substr(s, 0, 5));
+
+// С отрицательным индексом
+console >> print("substr(-5) = ");
+console >> println(string >> substr(s, -5));
+
+// Регистр
+console >> print("to_upper = ");
+console >> println(string >> to_upper(s));
+console >> print("to_lower = ");
+console >> println(string >> to_lower(s));
+
+// Поиск
+console >> print("find('World') = ");
+console >> print_int(string >> find(s, "World"));
+console >> println("");
+
+// Замена
+console >> print("replace = ");
+console >> println(string >> replace(s, "World", "Askal"));
+
+// Проверки
+console >> print("starts_with 'Hello': ");
+console >> print_bool(string >> starts_with(s, "Hello"));
+console >> println("");
+console >> print("ends_with 'World': ");
+console >> print_bool(string >> ends_with(s, "World"));
+console >> println("");
+
+// Разделение
+var str csv = "a,b,c,d";
+console >> print("split = ");
+console >> println(string >> split(csv, ","));
+
+// Повторение
+console >> print("repeat 3 = ");
+console >> println(string >> repeat("ab", 3));
+
+// Конверсии
+console >> print("to_int('123') = ");
+console >> print_int(string >> to_int("123"));
+console >> println("");
+
+console >> print("to_bin(42) = ");
+console >> println(string >> to_bin(42));
+
+console >> print("to_int_base('101010', 2) = ");
+console >> print_int(string >> to_int_base("101010", 2));
+console >> println("");
