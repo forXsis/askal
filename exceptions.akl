@@ -1,0 +1,61 @@
+use console;
+
+// 1. try + catch
+try {
+    console >> println("try block");
+    throw 42;
+    console >> println("NOT reached");
+} catch (e) {
+    console >> println("caught 42");
+}
+
+// 2. try + finally (без catch)
+try {
+    console >> println("try with finally");
+} finally {
+    console >> println("finally runs");
+}
+
+// 3. try + catch + finally
+try {
+    console >> println("start");
+    throw "boom";
+} catch (e) {
+    console >> println("caught boom");
+} finally {
+    console >> println("cleanup");
+}
+
+// 4. вложенные try
+console >> println("");
+try {
+    try {
+        console >> println("inner try");
+        throw 1;
+    } catch (e) {
+        console >> println("inner catch");
+        throw 2;
+    }
+} catch (e) {
+    console >> println("outer catch");
+}
+
+// 5. функция, бросающая исключение
+fun safeDiv(int64 a, int64 b) -> int64 {
+    if (b == 0) {
+        throw "division by zero";
+    }
+    return a / b;
+}
+
+try {
+    var int64 r = safeDiv(10, 2);
+    console >> print("10 / 2 = ");
+    console >> print_int(r);
+    console >> println("");
+
+    var int64 r2 = safeDiv(10, 0);
+    console >> println("NOT reached");
+} catch (e) {
+    console >> println("caught division error");
+}
