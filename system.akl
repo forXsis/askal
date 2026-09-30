@@ -1,0 +1,41 @@
+use console;
+use system;
+
+// Платформа
+console >> print("platform = ");
+console >> println(system >> platform());
+
+console >> print("arch = ");
+console >> println(system >> arch());
+
+console >> print("hostname = ");
+console >> println(system >> hostname());
+
+console >> print("username = ");
+console >> println(system >> username());
+
+// Время
+console >> print("time_ms = ");
+console >> print_int(system >> time_ms());
+console >> println("");
+
+console >> print("time_unix = ");
+console >> print_int(system >> time_unix());
+console >> println("");
+
+// Рабочая директория
+console >> print("cwd = ");
+console >> println(system >> cwd());
+
+// Environment
+console >> print("PATH exists: ");
+console >> print_bool(system >> env("PATH") != "");
+console >> println("");
+
+// Пауза
+console >> println("Sleeping 100ms...");
+system >> sleep(100);
+
+// Beep
+console >> println("Beep!");
+system >> beep(800, 100);
