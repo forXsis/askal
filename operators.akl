@@ -1,0 +1,52 @@
+use console;
+
+var int64 a = 20;
+var int64 b = 7;
+
+// Арифметика
+console >> print("a + b = "); console >> print_int(a + b); console >> println("");
+console >> print("a - b = "); console >> print_int(a - b); console >> println("");
+console >> print("a * b = "); console >> print_int(a * b); console >> println("");
+console >> print("a / b = "); console >> print_int(a / b); console >> println("");
+console >> print("a % b = "); console >> print_int(a % b); console >> println("");
+console >> print("-a = ");    console >> print_int(-a);    console >> println("");
+
+// Составные присваивания
+var int64 x = 100;
+x += 10;   // 110
+x -= 20;   // 90
+x *= 2;    // 180
+x /= 3;    // 60
+x %= 7;    // 4
+console >> print("x = "); console >> print_int(x); console >> println("");
+
+// Инкремент и декремент
+x++;
+x++;
+x--;
+console >> print("x after ++/-- = "); console >> print_int(x); console >> println("");
+
+// Сравнения
+console >> print("a == b: "); console >> print_bool(a == b); console >> println("");
+console >> print("a != b: "); console >> print_bool(a != b); console >> println("");
+console >> print("a <  b: "); console >> print_bool(a <  b); console >> println("");
+console >> print("a >  b: "); console >> print_bool(a >  b); console >> println("");
+console >> print("a <= b: "); console >> print_bool(a <= b); console >> println("");
+console >> print("a >= b: "); console >> print_bool(a >= b); console >> println("");
+
+// Логика
+var bool t = true;
+var bool f = false;
+console >> print("t && f: "); console >> print_bool(t && f); console >> println("");
+console >> print("t || f: "); console >> print_bool(t || f); console >> println("");
+console >> print("!t: ");     console >> print_bool(!t);     console >> println("");
+
+// Тернарный
+var int64 min = (a < b) ? a : b;
+var int64 max = (a > b) ? a : b;
+console >> print("min = "); console >> print_int(min); console >> println("");
+console >> print("max = "); console >> print_int(max); console >> println("");
+
+// Конкатенация с конверсией
+var str msg = "a = " + a + ", b = " + b;
+console >> println(msg);
