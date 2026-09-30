@@ -1,0 +1,33 @@
+use console;
+use file;
+
+var str path = "test_output.txt";
+
+// Запись
+var int64 written = file >> write_file(path, "Hello, file!\nSecond line.\n");
+console >> print("written: ");
+console >> print_int(written);
+console >> println(" bytes");
+
+// Проверка существования
+if (file >> exists(path)) {
+    console >> println("file exists");
+}
+
+// Чтение целиком
+var str content = file >> read_file(path);
+console >> print("content:\n");
+console >> println(content);
+
+// Дописать
+file >> append_file(path, "Third line.\n");
+
+// Строк
+console >> print("line count: ");
+console >> print_int(file >> count_lines(path));
+console >> println("");
+
+// Удалить
+if (file >> remove(path)) {
+    console >> println("removed");
+}
