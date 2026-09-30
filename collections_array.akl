@@ -1,0 +1,36 @@
+use console;
+
+fun putln(int64 v) {
+    console >> print_int(v);
+    console >> println("");
+    return null;
+}
+
+// Литерал — 5 нулей
+var array arr = [0, 0, 0, 0, 0];
+
+putln(len(arr));         // 5
+putln(arr[0]);           // 0
+
+// Запись
+arr[2] = 42;
+putln(arr[2]);           // 42
+
+// Чтение
+putln(arr[4]);           // 0
+
+// fill — заполнить все элементы
+arr >> fill(7);
+putln(arr[0]);           // 7
+putln(arr[1]);           // 7
+putln(arr[2]);           // 7
+putln(arr[3]);           // 7
+putln(arr[4]);           // 7
+
+// Итерация
+console >> print("arr: ");
+for (var int64 i = 0; i < len(arr); i = i + 1) {
+    console >> print_int(arr[i]);
+    console >> print(" ");
+}
+console >> println("");
