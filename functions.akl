@@ -1,0 +1,70 @@
+use console;
+
+// Простая функция
+fun greet(str name) {
+    console >> print("Hello, ");
+    console >> println(name);
+    return null;
+}
+
+// С возвращаемым значением
+fun add(int64 a, int64 b) -> int64 {
+    return a + b;
+}
+
+fun maxOf(int64 a, int64 b) -> int64 {
+    if (a > b) { return a; }
+    return b;
+}
+
+// Рекурсия: факториал
+fun fact(int64 n) -> int64 {
+    if (n <= 1) { return 1; }
+    return n * fact(n - 1);
+}
+
+// Рекурсия: числа Фибоначчи
+fun fib(int64 n) -> int64 {
+    if (n <= 1) { return n; }
+    return fib(n - 1) + fib(n - 2);
+}
+
+// Forward reference: a вызывает b, b объявлена ниже
+fun a() -> int64 {
+    return b() + 1;
+}
+fun b() -> int64 {
+    return 42;
+}
+
+// Много аргументов
+fun add5(int64 a, int64 b, int64 c, int64 d, int64 e) -> int64 {
+    return a + b + c + d + e;
+}
+
+// --- использование ---
+greet("World");
+
+console >> print("3 + 4 = ");
+console >> print_int(add(3, 4));
+console >> println("");
+
+console >> print("max(10, 7) = ");
+console >> print_int(maxOf(10, 7));
+console >> println("");
+
+console >> print("6! = ");
+console >> print_int(fact(6));
+console >> println("");
+
+console >> print("fib(10) = ");
+console >> print_int(fib(10));
+console >> println("");
+
+console >> print("a() = ");
+console >> print_int(a());
+console >> println("");
+
+console >> print("add5(1,2,3,4,5) = ");
+console >> print_int(add5(1, 2, 3, 4, 5));
+console >> println("");
