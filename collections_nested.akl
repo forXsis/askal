@@ -1,0 +1,37 @@
+use console;
+
+// Список в словаре
+var dict config = {
+    "name": "Askal",
+    "numbers": [1, 2, 3, 4, 5]
+};
+
+console >> print("name = ");
+console >> println(config["name"]);
+
+var list nums = config["numbers"];
+console >> print("nums[0] = ");
+console >> print_int(nums[0]);
+console >> println("");
+
+// Словарь в списке
+var list users = [];
+users >> push("alice");
+users >> push("bob");
+console >> println(users[0]);
+console >> println(users[1]);
+
+// Список из словарей (через промежуточную переменную)
+var dict alice = {"name": "Alice", "age": 30};
+var dict bob   = {"name": "Bob",   "age": 25};
+
+var list people = [];
+people >> push(alice);
+people >> push(bob);
+
+console >> print("people count = ");
+console >> print_int(len(people));
+console >> println("");
+
+console >> print("first user: ");
+console >> println(people[0]);
