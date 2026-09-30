@@ -1,0 +1,90 @@
+use console;
+
+class Vec2 {
+    var float x = 0.0;
+    var float y = 0.0;
+
+    fun init(float x0, float y0) {
+        x = x0;
+        y = y0;
+        return null;
+    }
+
+    fun print() {
+        console >> print("Vec2(");
+        console >> print_float(x);
+        console >> print(", ");
+        console >> print_float(y);
+        console >> println(")");
+        return null;
+    }
+}
+
+// Объект как аргумент
+fun dot(Vec2 a, Vec2 b) -> float {
+    return (a >> x) * (b >> x) + (a >> y) * (b >> y);
+}
+
+// Объект как возвращаемое значение
+fun makeVec(float x, float y) -> Vec2 {
+    return Vec2(x, y);
+}
+
+// Явный self
+class Counter {
+    var int64 n = 0;
+
+    fun init(int64 start) {
+        n = start;
+        return null;
+    }
+
+    fun inc() {
+        n = n + 1;
+        return null;
+    }
+
+    fun get() -> int64 {
+        return n;
+    }
+
+    fun double() -> int64 {
+        return self >> get() + self >> get();
+    }
+}
+
+fun main() {
+    var Vec2 v1 = Vec2(2.0, 3.0);
+    var Vec2 v2 = Vec2(4.0, 5.0);
+
+    v1 >> print();
+    v2 >> print();
+
+    console >> print("dot(v1, v2) = ");
+    console >> print_float(dot(v1, v2));
+    console >> println("");
+
+    var Vec2 v3 = makeVec(10.0, 20.0);
+    v3 >> print();
+
+    // Counter с self
+    var Counter c = Counter(5);
+    c >> inc();
+    c >> inc();
+    console >> print("c = ");
+    console >> print_int(c >> get());
+    console >> println("");
+
+    console >> print("c * 2 = ");
+    console >> print_int(c >> double());
+    console >> println("");
+
+    v1 >> free();
+    v2 >> free();
+    v3 >> free();
+    c >> free();
+
+    return null;
+}
+
+main();
