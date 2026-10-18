@@ -70,8 +70,8 @@
 
 ### Нативные библиотеки
 
-- 9 DLL из коробки: `console`, `string`, `file`, `system`, `tools`,
-  `memory`, `array`, `list`, `dict`.
+- 8 DLL из коробки: `console`, `string`, `file`, `system`, `tools`,
+  `memory`, `bmf`, `python`
 - Простой ABI через `askal_db`.
 - Манифесты (`*_manifest.json`) для IDE и автодополнения.
 
@@ -355,10 +355,3 @@ var int64 x = tools >> clamp_int(200, 0, 100);  // 100
 ## Лицензия
 
 Лицензия **Apache 2.0**. См. [LICENSE](LICENSE).
-
----
-
-## Благодарности
-
-Askal создан как учебный проект по компиляторам и виртуальным
-машинам. Вдохновлён языками C, C#, Python, Go и Lua.
